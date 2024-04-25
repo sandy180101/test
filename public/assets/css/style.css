@@ -1,0 +1,141 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f57c2c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: #f8eaea;
+} 
+
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #070505;
+  text-decoration: none;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+  display: none; /* Hide initially on larger screens */
+  cursor: pointer;
+}
+
+.menu-icon:before {
+  content: "\2630"; /* Unicode for hamburger icon */
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: auto;
+  }
+
+  .menu-icon {
+    display: block; /* Display on smaller screens */
+  }
+
+  nav ul {
+    display: none; /* Hide the menu by default on smaller screens */
+  }
+
+  nav ul.show {
+    display: flex; /* Show the menu when the toggle is clicked */
+    flex-direction: column;
+    background-color: #f8eaea;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .container {
+    width: 50%;
+    background-color: #ec7525; 
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #312727;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-group label {
+    flex: 40%;
+    font-weight: bold;
+    margin-bottom: 5px;
+    
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select {
+    flex: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.form-group input[type="checkbox"] {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+button {
+    background-color: #ff7f0e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #753708; 
+}
+
+.error-message {
+color: red;
+font-size: 14px;
+flex: 100%;
+}
+}
